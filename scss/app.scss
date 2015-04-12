@@ -38,3 +38,36 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+.userinfo .username {
+    color: #fff;
+    margin-left: 20px;
+}
+
+.main-section>.row {
+	max-width: 100%;
+}
+
+.activity {
+    background: rgba(0,0,0,0.03);
+    padding: 10px;
+    margin-left: 30px;
+    border-left: 3px solid rgba(0,0,0,0.5);
+}
+
+@import "variables";
+@import "mixins";
+@import "path";
+@import "core";
+@import "larger";
+@import "fixed-width";
+@import "list";
+@import "bordered-pulled";
+@import "animated";
+@import "rotated-flipped";
+@import "stacked";
+@import "icons";
+
+.fa {
+    margin-right: 3px;
+}
