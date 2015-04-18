@@ -1,6 +1,6 @@
-# Foundation libsass template
+# Kanboard UI Framework
 
-This is a template to start your own project that uses Grunt and libsass!
+Kanboard interface build with Zurb Foundation
 
 ## Requirements
 
@@ -13,7 +13,7 @@ You'll need to have the following items installed before continuing.
 ## Quickstart
 
 ```bash
-git clone git@github.com:zurb/foundation-libsass-template.git
+git clone git@github.com:SamuelMoraesF/kanboard-ui.git
 npm install && bower install
 ```
 
@@ -23,7 +23,12 @@ While you're working on your project, run:
 
 And you're set!
 
-## Directory Structure
+All files are build in `css/`, `js/` and in `fonts/`, just copy these folders to the `assets/` folder in kanboard.
 
-  * `scss/_settings.scss`: Foundation configuration settings go in here
-  * `scss/app.scss`: Application styles go here
+To preview, just run:
+
+```bash
+python3 -m http.server
+```
+
+And open `localhost:8000` on your browser.
