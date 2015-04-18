@@ -1,4 +1,5 @@
 *.DS_Store
 /css/*
+/js/*
 /bower_components/*
 /node_modules/*
