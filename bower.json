@@ -1,6 +1,11 @@
 {
   "name": "foundation-libsass-template",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "list.js": "~1.1.1",
+    "jquery-ui": "~1.11.4",
+    "jqueryui-touch-punch": "*",
+    "moment": "~2.10.2",
+    "fullcalendar": "~2.3.1"
   }
 }

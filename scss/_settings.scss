@@ -89,7 +89,7 @@ $include-html-global-classes: $include-html-classes;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif: Lato,Helvetica,Arial,sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
@@ -107,23 +107,23 @@ $include-html-global-classes: $include-html-classes;
 // $gainsboro   : #DDDDDD;
 // $iron        : #CCCCCC;
 // $base        : #AAAAAA;
-// $aluminum    : #999999;
+$aluminum    : #FFF;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
 // $steel       : #666666;
 // $charcoal    : #555555;
-// $tuatara     : #444444;
-// $oil         : #333333;
+$tuatara     : #34495E;
+$oil         : #34495E;
 // $jet         : #222222;
 // $black       : #000000;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: #1ABC9C;
 // $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+$alert-color: #E74C3C;
+$success-color: #2ECC71;
+$warning-color: #F1C40F;
+$info-color: #3498DB;
 
 // We use these to control various global styles
 // $body-bg: $white;
@@ -258,7 +258,7 @@ $include-html-global-classes: $include-html-classes;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
+$anchor-font-color: #16a085;
 // $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element
@@ -854,7 +854,7 @@ $include-html-global-classes: $include-html-classes;
 // $off-canvas-link-padding: rem-calc(10, 15);
 // $off-canvas-link-color: rgba($white, 0.7);
 // $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%);
-// $off-canvas-back-bg: #444;
+$off-canvas-back-bg: #34495E;
 // $off-canvas-back-border-top: $off-canvas-label-border-top;
 // $off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
 // $off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
