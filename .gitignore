@@ -3,3 +3,5 @@
 /js/*
 /bower_components/*
 /node_modules/*
+/tmp/*
+!/tmp/.gitadd

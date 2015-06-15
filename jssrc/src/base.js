@@ -130,8 +130,6 @@ var Kanboard = (function() {
                 link.parent().addClass("form-tab-selected");
 
                 preview.find(".markdown").html(data)
-                preview.css("height", textarea.css("height"));
-                preview.css("width", textarea.css("width"));
 
                 write.hide();
                 preview.show();
@@ -169,13 +167,8 @@ var Kanboard = (function() {
         Init: function() {
 
             // Project select box
-            $("#board-selector").chosen({
-                width: 180,
-                no_results_text: $("#board-selector").data("notfound")
-            });
-
-            $("#board-selector").change(function() {
-                window.location = $(this).attr("data-board-url").replace(/PROJECT_ID/g, $(this).val());
+            var searchproject = new List('projects', {
+              valueNames: [ 'projeto' ]
             });
 
             // Check the session every 60s
@@ -188,7 +181,8 @@ var Kanboard = (function() {
 
             Mousetrap.bind("b", function(e) {
                 e.preventDefault();
-                $('#board-selector').trigger('chosen:open');
+                $('.off-canvas-wrap').foundation('offcanvas', 'show', 'move-right');
+                $('.left-off-canvas-menu .search').focus();
             });
 
             $.datepicker.setDefaults($.datepicker.regional[$("body").data("js-lang")]);
@@ -224,8 +218,9 @@ var Kanboard = (function() {
             });
 
             // Dropdown
-            $(".dropit-submenu").hide();
-            $('.dropdown').not(".dropit").dropit({ triggerParentEl : "span" });
+            // TODO
+            /*$(".dropit-submenu").hide();
+            $('.dropdown').not(".dropit").dropit({ triggerParentEl : "span" });*/
 
             // Task auto-completion
             if ($(".task-autocomplete").length) {

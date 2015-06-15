@@ -317,22 +317,23 @@ Kanboard.Board = (function() {
     }
 
     // Load filter events
+    // TODO
     function filter_load_events()
     {
         var projectId = $('#board').data('project-id');
 
         $("#form-user_id").chosen({
-            width: "180px",
+            width: "100%",
             no_results_text: $("#form-user_id").data("notfound")
         });
 
         $("#form-category_id").chosen({
-            width: "200px",
+            width: "100%",
             no_results_text: $("#form-category_id").data("notfound")
         });
 
         $("#more-filters").chosen({
-            width: "30%",
+            width: "100%",
             no_results_text: $("#more-filters").data("notfound")
         });
 

@@ -12,9 +12,29 @@ module.exports = function(grunt) {
           sourceMap: true,
         },
         files: {
-          'css/app.css': 'scss/app.scss'
+          'tmp/sass.css': 'scss/app.scss'
         }
       }
+    },
+
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      target: {
+        files: {
+          'css/app.css': ['tmp/sass.css', 'bower_components/chosen/chosen.min.css']
+        }
+      }
+    },
+
+    copy: {
+      main: {
+        files: [
+          {expand: true, flatten: true, src: ['bower_components/chosen/*.png'], dest: 'css/', filter: 'isFile'},
+        ],
+      },
     },
 
     concat: {
@@ -27,6 +47,8 @@ module.exports = function(grunt) {
         src: ['bower_components/modernizr/modernizr.js',
               'bower_components/jquery/dist/jquery.js',
               'bower_components/foundation/js/foundation.js',
+              'bower_components/list.js/dist/list.js',
+              'bower_components/chosen/chosen.jquery.min.js',
               'jssrc/src/base.js',
               'jssrc/src/board.js',
               'jssrc/src/calendar.js',
@@ -80,8 +102,13 @@ module.exports = function(grunt) {
 
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['sass']
-      }
+        tasks: ['sass', 'cssmin']
+      },
+
+      javascript: {
+        files: 'jssrc/**/*.js',
+        tasks: ['concat', 'uglify']
+      },
     }
   });
 
@@ -89,7 +116,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('build', ['sass', 'concat', 'uglify']);
+  grunt.registerTask('build', ['sass', 'cssmin', 'concat', 'uglify', 'copy']);
   grunt.registerTask('default', ['build','watch']);
 }

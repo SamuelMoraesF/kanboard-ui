@@ -41,6 +41,10 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
+.inner-wrap {
+    min-height: 100vh;
+}
+
 .userinfo .username {
     color: #fff;
     margin-left: 20px;
@@ -54,6 +58,17 @@
 .username a:hover {
     background: transparent !important;
     color: #fff;
+}
+
+.main-section {
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #EEE;
+        padding-bottom: 10px;
+    }
+
 }
 
 .main-section>.row {
@@ -866,6 +881,37 @@ a.fc-more:hover {
     cursor: s-resize;
 }
 
+.form-required {
+    display: none;
+}
+
 .fc-time-grid-event .fc-resizer:after {
     content: "=";
+}
+
+.smallcontainer {
+    border:1px solid #eee;
+    padding:20px;
+}
+
+.summary {
+    background-color: #f1c40f;
+    padding: 10px;
+
+    ul {
+        line-height: 2em;
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+}
+
+.space {
+    width:100%;
+    display:block;
+    padding:10px;
+}
+
+.nobr br {
+    display: none;
 }
